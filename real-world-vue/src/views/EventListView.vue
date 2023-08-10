@@ -51,7 +51,7 @@ const props = defineProps({
 <template>
     <div>
           <h1>Events For Good</h1>
-  <main class="events">
+  <main class="flex flex-col items-center">
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
     <div class="pagination">
       <RouterLink :to="{ name: 'EventList', query: { page: page - 1 } }" rel="prev" v-if="page!=1" id="page-prev">
@@ -70,12 +70,7 @@ const props = defineProps({
 </template>
 
 <style scoped>
-  .events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .pagination {
     display: flex;
     width: 290px;
