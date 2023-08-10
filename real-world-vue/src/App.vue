@@ -9,7 +9,7 @@ const { message } = storeToRefs(store)
 <template>
   <header class="max-h-screen leading-normal">
    
-      <nav>
+      <nav class="p-8">
         <RouterLink :to="{name: 'EventList'}">Home</RouterLink>
         |
         <RouterLink :to="{name: 'about'}">About</RouterLink>
@@ -19,7 +19,7 @@ const { message } = storeToRefs(store)
         <RouterLink :to="{name: 'student'}">Student</RouterLink>
       </nav>
       <div id="flashMessage" v-if="message">
-      <h4>{{ message }}</h4></div>
+      <h4 class="text-xl">{{ message }}</h4></div>
   </header>
 
   <RouterView />
@@ -34,9 +34,9 @@ const { message } = storeToRefs(store)
   color: #2c3e50;
 }
 
-nav{
+/* nav{
   padding: 30px;
-}
+} */
 nav a{
   font-weight: bold;
   color: #2c3e50;
@@ -55,9 +55,9 @@ nav a.router-link-exact-active{
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
-h4 {
+/* h4 {
   font-size: 20px;
-}
+} */
 
 @keyframes yellowfade {
   from {
