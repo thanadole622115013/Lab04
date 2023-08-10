@@ -7,7 +7,7 @@ const { message } = storeToRefs(store)
 </script>
 
 <template>
-  <header>
+  <header class="max-h-screen leading-normal">
    
       <nav>
         <RouterLink :to="{name: 'EventList'}">Home</RouterLink>
@@ -45,10 +45,6 @@ nav a.router-link-exact-active{
   color: #42b983;
 }
 
-header{
-  line-height: 1.5;
-  max-height: 100vh;
-}
 .logo {
   display: block;
   margin: 0 auto 2rem;
