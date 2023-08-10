@@ -53,11 +53,12 @@ const props = defineProps({
           <h1>Events For Good</h1>
   <main class="flex flex-col items-center">
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
+    
     <div class="pagination">
-      <RouterLink :to="{ name: 'EventList', query: { page: page - 1 } }" rel="prev" v-if="page!=1" id="page-prev">
+      <RouterLink :to="{ name: 'EventList', query: { page: page - 1 } }" rel="prev" v-if="page!=1" class="text-left">
     Prev Page
     </RouterLink>
-    <RouterLink :to="{ name: 'EventList', query: { page: page + 1 } }" rel="next" v-if="hasNextPage" id="page-next">
+    <RouterLink :to="{ name: 'EventList', query: { page: page + 1 } }" rel="next" v-if="hasNextPage" class="text-right">
     Next Page
     </RouterLink>
     </div>
@@ -80,10 +81,5 @@ const props = defineProps({
     text-decoration: none;
     color: #2c3e50;
   }
-  #page-prev {
-    text-align: left;
-  }
-  #page-next {
-    text-align: right;
-  }
+
 </style>
