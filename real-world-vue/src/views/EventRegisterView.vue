@@ -3,7 +3,7 @@ import type { PropType } from 'vue'
 import type { EventItem } from '@/type'
 
 import { useRouter } from 'vue-router'
-import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, RouterView } from 'vue-router'
 import { useMessageStore } from '@/stores/message'
 
 const props = defineProps({
